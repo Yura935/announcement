@@ -1,0 +1,181 @@
+.announcementList {
+  height: 90vh;
+  width: 100%;
+  padding: 15px 20px 30px;
+  background-color: gainsboro;
+
+  &-menu {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__change {
+      width: 15%;
+      display: flex;
+      align-items: center;
+
+      .change__item {
+        width: 45px;
+        height: 45px;
+        font-size: 50px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #edit {
+        font-size: 45px;
+        margin: 0 5px;
+      }
+
+      #remove {
+        font-size: 45px;
+      }
+    }
+
+    &__search {
+      width: 70%;
+      height: 50px;
+
+      .search-box {
+        width: 100%;
+        height: inherit;
+        padding: 0 15px;
+
+        input {
+          width: 100%;
+          height: 40px;
+          margin: 5px;
+          padding-left: 10px;
+        }
+
+        input:focus {
+          outline: none;
+          border: 1px solid blue;
+          box-shadow: 0 0 8px 1px dodgerblue;
+        }
+      }
+    }
+
+    .cancel {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url(../../../assets/icons/removeRed.svg);
+      background-position: center;
+      background-size: contain;
+      right: 35px;
+      cursor: pointer;
+    }
+  }
+
+  &-item {
+    height: 30px;
+    width: 350px;
+    display: flex;
+    margin-top: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    &__check {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      input {
+        margin: 10px 5px;
+      }
+
+      label{
+        font-size: 22px;
+        margin-left: 5px;
+
+        a{
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &-new {
+    width: 400px;
+    position: absolute;
+    left: 450px;
+    background-color: chocolate;
+    border-radius: 5px;
+    transition: 1s top;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    &__head {
+      height: 30px;
+      text-align: center;
+      margin: 5px;
+    }
+
+    &__cancel {
+      width: 35px;
+      height: 35px;
+      background-image: url(../../../assets/icons/cancel.svg);
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+
+    label {
+      font-size: 22px;
+    }
+
+    &__title {
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      margin: 5px;
+
+      input {
+        width: 200px;
+        padding-left: 5px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+    }
+
+    &__description {
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      margin: 5px;
+
+      textarea {
+        width: 200px;
+        padding-left: 5px;
+        padding-top: 5px;
+        resize: none;
+      }
+
+      textarea:focus {
+        outline: none;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+
+      .btnSubmit {
+        width: 100px;
+        height: 35px;
+        background-color: forestgreen;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 10px;
+      }
+    }
+  }
+}

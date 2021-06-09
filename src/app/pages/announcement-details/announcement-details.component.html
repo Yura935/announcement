@@ -1,0 +1,25 @@
+<section>
+    <div class="ann-title">
+        <div class="ann-title__inner">
+            <h2>{{view?.title}}</h2>
+        </div>
+    </div>
+    <div class="ann-desc">
+        <div class="ann-desc__inner">
+            <p>{{view?.description}}</p>
+        </div>
+    </div>
+    <div class="ann-data">
+        <p>{{view?.date.toDate() | date: 'dd.mm.yyyy'}}</p>
+    </div>
+    <div class="back" (click)="location.back()">Back</div>
+    <div class="ann-similarTitle">
+        <h1>Recomendations:</h1>
+    </div>
+    <div class="ann-similarBox">
+        <div class="similarItem" *ngFor="let item of arrSimilar; let i=index">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.description }}</p>
+        </div>
+    </div>
+</section>

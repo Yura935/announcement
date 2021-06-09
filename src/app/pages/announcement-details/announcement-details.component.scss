@@ -1,0 +1,78 @@
+section{
+    width: 100%;
+    height: 90vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: gainsboro;
+    padding: 10px;
+
+    .ann-title{
+        width: inherit;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__inner{
+            width: 200px;
+            text-align: center;
+        }
+    }
+
+    .ann-desc{
+        min-height: 50px;
+        width: inherit;
+        margin: 15px 0;
+
+        &__inner{
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+
+    .ann-data{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .back{
+        width: 100px;
+        height: 40px;
+        background-color: lawngreen;
+        border: 1px soid lightgreen;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 2.5;
+        color: lightslategray;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .ann-similarTitle{
+        padding: 20px;
+
+        h1{
+            font-size: 28px;
+        }
+    }
+
+    .ann-similarBox{
+        padding: 0 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .similarItem{
+            width: 180px;
+            min-height: 70px;
+            border: 1px solid black;
+            margin: 10px 0;
+            padding: 5px;
+            text-align: center;
+
+            p{
+                margin-top: 10px;
+            }
+        }
+    }
+}

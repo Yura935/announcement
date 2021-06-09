@@ -1,0 +1,43 @@
+<section class="announcementList">
+    <div class="announcementList-menu">
+        <div class="announcementList-menu__change">
+            <span class="change__item icon-add" id="add" (click)="openAddModal()"><span class="path1"></span><span
+                    class="path2"></span></span>
+            <span class="change__item icon-edit" id="edit" (click)="editAnnouncement()" *ngIf="edit"></span>
+            <span class="change__item icon-remove" id="remove" (click)="deleteAnnouncement()" *ngIf="delete"></span>
+        </div>
+        <div class="announcementList-menu__search">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Enter a title ..." (input)="cancelSearch()"
+                    [(ngModel)]="searchName" name="searchName">
+            </div>
+        </div>
+        <div class="cancel" *ngIf="cancel" (click)="reset()"></div>
+    </div>
+
+    <div class="announcementList-item" *ngFor="let item of announcements | search: searchName; let i=index">
+        <div class="announcementList-item__check">
+            <input type="checkbox" class="check" [attr.name]="item.title" [id]="'a'+i" (change)="checking(i, $event)">
+            <label [attr.for]="item.title"><a [routerLink]="[ '/announcement-details/' + item.title]">{{item.title}}</a></label>
+        </div>
+    </div>
+
+    <div class="announcementList-new" [style.top]="top">
+        <div class="announcementList-new__head">
+            <h2>New announcement</h2>
+        </div>
+        <div class="announcementList-new__cancel" (click)="closeAddModal()"></div>
+        <div class="announcementList-new__title">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" [(ngModel)]="title">
+        </div>
+        <div class="announcementList-new__description">
+            <label for="desc">Description:</label>
+            <textarea name="desc" id="desc" cols="30" rows="10" [(ngModel)]="desc"></textarea>
+        </div>
+        <div class="announcementList-new__btn">
+            <input class="btnSubmit" *ngIf="check" type="button" value="Add" (click)="addAnnouncement()">
+            <input class="btnSubmit" *ngIf="!check" type="button" value="Save" (click)="saveAnnouncement()">
+        </div>
+    </div>
+</section>
